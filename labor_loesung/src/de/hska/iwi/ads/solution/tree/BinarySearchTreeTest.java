@@ -1,7 +1,4 @@
-/**
- * 
- */
-package de.hska.iwi.ads.solution.list;
+package de.hska.iwi.ads.solution.tree;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,20 +8,14 @@ import org.junit.jupiter.api.Test;
 
 import de.hska.iwi.ads.dictionary.MapTest;
 
-/**
- * @author Friedemann
- * @param <K>
- * @param <V>
- *
- */
-class DoubleLinkedListTest extends MapTest {
-	
+class BinarySearchTreeTest extends MapTest {
+
 	@Override
 	public <K extends Comparable<K>, V> Map<K, V> createMap() {
-		return new DoubleLinkedList<K, V>();
+		return new BinarySearchTree<K, V>();
 	}
 	
-
+	
 	@Test
 	void test1() {
 		Map<Integer, Integer> list = createMap();
@@ -70,6 +61,5 @@ class DoubleLinkedListTest extends MapTest {
 	    list.put(6, 8);
 	    assertThrows(UnsupportedOperationException.class, () -> list.clear());
 	}
-
 
 }
