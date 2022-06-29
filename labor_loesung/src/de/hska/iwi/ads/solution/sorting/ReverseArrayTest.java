@@ -72,5 +72,17 @@ class ReverseArrayTest {
 		}
 	}
 	
+	@Test
+	void test6() {
+		Integer[] test =   {4,5,5,3,8,1};
+		Integer[] result = {1,8,3,5,5,4};
+		
+		ReverseArray<Integer> reverser = createReverseArray();
+		reverser.reverse(test, 0, test.length - 1);
+		for (int i = 0; i < test.length; i++) {
+			assertEquals(result[i], test[i]);
+		}
+	}
+	
 
 }
